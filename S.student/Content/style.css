@@ -1,0 +1,25 @@
+﻿
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.id{
+   color:white;
+}
+
+body {
+    background-image: url('../image/whatsapp image 2024-05-29 at 04.17.41_f1e0ac1a.jpg');
+    backface-visibility: visible;
+    background-repeat: no-repeat;
+    object-fit: contain;
+    background-position: center center;
+}
+
+
+.btn {
+    background-color: green;
+    color: white;
+}
+}

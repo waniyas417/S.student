@@ -1,0 +1,50 @@
+﻿@model S.student.Models.SearchViewModel
+
+
+@using (Html.BeginForm("SearchResults", "Searches", FormMethod.Post))
+{
+    <div>
+        @Html.LabelFor(model => model.SearchQuery)
+        @Html.TextBoxFor(model => model.SearchQuery)
+        <input type="submit" value="Search" class="btn btn-success" />
+
+
+
+    </div>
+}
+
+@if (Model.SearchResults != null && Model.SearchResults.Any())
+{
+    <table>
+        <tr>
+            <th>student_id</th>
+            <th>first_name</th>
+            <th>last_name</th>
+            <th>date_of_birth</th>
+            <th>gender</th>
+            <th>course_name</th>
+            <th>course_description</th>
+            <th>enrollment_date</th>
+
+        </tr>
+        @foreach (var item in Model.SearchResults)
+        {
+            <tr>
+                <td>@item.student_id</td>
+                <td>@item.first_name</td>
+                <td>@item.last_name</td>
+                <td>@item.date_of_birth</td>
+                <td>@item.gender</td>
+                <td>@item.course_name</td>
+                <td>@item.course_description</td>
+                <td>@item.enrollment_date</td>
+                <
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <p>No results found.</p>
+}
+
